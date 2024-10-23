@@ -10,7 +10,8 @@
 
 
 def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
+    sort_sentece = sorted(sentence.split(), key = len)
+    return sort_sentece[-1]
 
 
 if __name__ == "__main__":
