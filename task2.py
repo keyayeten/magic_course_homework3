@@ -15,7 +15,11 @@
 
 
 def split_file_path(file_path):
-    pass  # вместо pass - напишите свое решение
+    path = file_path[:(file_path.rfind('/'))]
+    extention = file_path[(file_path.rfind('.') + 1):]
+    file_name = file_path[(file_path.rfind('/') + 1):(file_path.rfind('.'))]
+    result = path, file_name, extention
+    return result
 
 
 if __name__ == "__main__":
