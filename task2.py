@@ -14,8 +14,9 @@
 # ('/var/log', 'system', 'log')
 
 
-def split_file_path(file_path):
-    pass  # вместо pass - напишите свое решение
+def split_file_path(file_path:str) -> tuple:
+    position1, position2 = file_path.rfind("/"), file_path.rfind(".")
+    return file_path[:position1], file_path[position1 + 1:position2], file_path[position2 + 1:]
 
 
 if __name__ == "__main__":
