@@ -23,8 +23,8 @@
 # print(check_companies_profit(companies2))  # True
 
 
-def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
+def check_companies_profit(companies:dict)->bool:
+    return len(companies) == sum((map(lambda x: True if sum(x) >= 0 else False, companies.values())))
 
 
 if __name__ == "__main__":

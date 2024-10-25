@@ -19,7 +19,19 @@
 
 
 def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
+    res = True
+    if len(str_1) != len(str_2):
+        res = False
+    else:
+        l2 = list(str_2)
+        for i in str_1:
+            if i in l2:
+                l2.remove(i)
+            else:
+                res = False
+        if len(l2) != 0:
+            res = False
+    return res
 
 
 if __name__ == "__main__":
