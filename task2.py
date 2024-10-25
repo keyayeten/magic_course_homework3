@@ -15,6 +15,8 @@
 
 
 def split_file_path(file_path):
+    str = "/home/user/documents/report.txt"
+    str1 = str.split("/", -1)
     pass  # вместо pass - напишите свое решение
 
 

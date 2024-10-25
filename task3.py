@@ -14,7 +14,7 @@ def longest_word(sentence):
 
     longest_word = max(str1, key=len)
 
-    return(longest_word)
+    return longest_word
 
 
 if __name__ == "__main__":

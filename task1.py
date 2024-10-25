@@ -24,8 +24,13 @@
 
 
 def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
-
+    result = 0
+    for value in companies.key[0]():
+        result += value
+    if result > 0:
+        print(True)
+    else:
+        print(False)
 
 if __name__ == "__main__":
     companies = {
