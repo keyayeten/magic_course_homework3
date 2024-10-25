@@ -19,7 +19,7 @@
 
 
 def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
+    return sorted(str_1) == sorted(str_2)
 
 
 if __name__ == "__main__":
