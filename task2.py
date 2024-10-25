@@ -14,11 +14,14 @@
 # ('/var/log', 'system', 'log')
 
 
-def split_file_path(file_path):
-    str = "/home/user/documents/report.txt"
-    str1 = str.split("/", -1)
-    pass  # вместо pass - напишите свое решение
+def split_file_path(file_path): 
+    str1 = file_path.rsplit("/", 1)
+    str3 =str1[1]
+    str2 = str3.split(".")
 
+    res = (str1[0], str2[0], str2[1])
+    
+    return res
 
 if __name__ == "__main__":
     file_path = "/home/user/documents/report.txt"
