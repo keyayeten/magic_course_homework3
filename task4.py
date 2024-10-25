@@ -14,7 +14,14 @@
 
 
 def count_frequencies(lst):
-    pass  # вместо pass - напишите свое решение
+    b = {}
+    for i in lst:
+        if i in b:
+            b[i] += 1
+        else:
+            b[i] = 1 
+
+    return b
 
 
 if __name__ == "__main__":

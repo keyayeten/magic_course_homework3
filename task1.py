@@ -24,8 +24,12 @@
 
 
 def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
+    a = []
+    for value in companies.values():
+        a.append(sum(value))
+        res = all(elem > 0 for elem in a)
 
+    return res
 
 if __name__ == "__main__":
     companies = {
