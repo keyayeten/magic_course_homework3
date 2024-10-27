@@ -17,9 +17,7 @@
 def split_file_path(file_path):
     path, name = file_path.rsplit('/', 1)
     name2, rashirenie = name.split('.')
-    t = tuple()
-    f_p = t + (path, name2, rashirenie)
-    return f_p
+    return path, name2, rashirenie
 
 
 

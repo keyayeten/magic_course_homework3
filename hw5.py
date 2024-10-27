@@ -11,7 +11,7 @@
 # str1_2 = "apple"
 # str2_2 = "papel"
 # print(are_anagrams(str1_2, str2_2))  # True
-
+#
 # Пример 3:
 # str1_3 = "hello"
 # str2_3 = "world"
@@ -19,11 +19,9 @@
 
 
 def are_anagrams(str_1, str_2):
-    for i in str_1:
-        for j in reversed(str_2):
-            if i == j:
-                return True
-        return False
+    if sorted(str_1) == sorted(str_2):
+        return True
+    return False
 
 
 
