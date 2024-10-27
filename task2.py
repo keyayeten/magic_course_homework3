@@ -1,3 +1,4 @@
+from pathlib import Path
 # Напишите функцию, которая принимает
 # на вход строку - абсолютный путь до файла.
 # Функция возвращает кортеж из трёх элементов: путь,
@@ -14,8 +15,13 @@
 # ('/var/log', 'system', 'log')
 
 
-def split_file_path(file_path):
-    pass  # вместо pass - напишите свое решение
+def split_file_path(file_path: str) -> tuple:
+    p = Path(file_path)
+    path = str(p.parent).replace("\\", "/")
+    name = p.stem
+    suffix = p.suffix
+    result = (path, name, suffix)
+    return result
 
 
 if __name__ == "__main__":
