@@ -4,6 +4,42 @@
 # каждой компании. Если все компании прибыльные,
 # верните истину, а если хотя бы одна убыточная - ложь.
 
+def check_companies_profit(companies):
+    total = 0
+    for c in companies.values():
+        total = sum(c)
+        print(total)
+    if total >= 0:
+        return True
+    else:
+        return False
+
+
+
+if __name__ == "__main__":
+    companies = {
+        "CompanyA": [1000, 200, -500, 300],
+        "CompanyB": [2000, -1000, 500],
+        "CompanyC": [3000, -1000, -3000]
+    }
+    companies2 = {
+        "CompanyA": [1000, 200, 300],
+        "CompanyB": [2000, -1000, 500],
+        "CompanyC": [3000, -500, 500]
+    }
+    #
+    print(
+        "Твой ответ",
+        check_companies_profit(companies),
+        "Верный ответ - False"
+    )
+    print(
+        "Твой ответ",
+        check_companies_profit(companies2),
+        "Верный ответ - True"
+    )
+
+
 # Пример ввода:
 # companies = {
 #     "CompanyA": [1000, 200, -500, 300],
@@ -21,34 +57,3 @@
 # }
 
 # print(check_companies_profit(companies2))  # True
-
-
-def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
-
-
-if __name__ == "__main__":
-    companies = {
-        "CompanyA": [1000, 200, -500, 300],
-        "CompanyB": [2000, -1000, 500],
-        "CompanyC": [3000, -1000, -3000]
-    }
-    companies2 = {
-        "CompanyA": [1000, 200, 300],
-        "CompanyB": [2000, -1000, 500],
-        "CompanyC": [3000, -500, 500]
-    }
-
-    print(
-        "Твой ответ",
-        check_companies_profit(companies),
-        "Верный ответ - False"
-    )
-
-    print()
-
-    print(
-        "Твой ответ",
-        check_companies_profit(companies2),
-        "Верный ответ - True"
-    )

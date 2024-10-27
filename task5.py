@@ -19,7 +19,12 @@
 
 
 def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
+    s1 = set(str_1)
+    s2 = set(str_2)
+    if s1.difference(s2) == set():
+        return True
+    else:
+        return False
 
 
 if __name__ == "__main__":

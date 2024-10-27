@@ -13,8 +13,15 @@
 # {'a': 3, 'b': 3, 'c': 1}
 
 
-def count_frequencies(lst):
-    pass  # вместо pass - напишите свое решение
+def count_frequencies(lst: list) -> dict[str, int]:
+    d = {}
+    for l in lst:
+        if l in d:
+            d[l] += 1
+        else:
+            d[l] = 1
+    return d
+
 
 
 if __name__ == "__main__":
