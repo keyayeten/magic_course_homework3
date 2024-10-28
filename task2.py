@@ -15,7 +15,15 @@
 
 
 def split_file_path(file_path):
-    pass  # вместо pass - напишите свое решение
+    file = file_path.split('/')[-1]
+    new_file = file.split('.')
+    file_name = new_file[0]
+    format = new_file[1]
+    path = file_path.split('/')
+    path.pop(-1)
+    path = '/'.join(path)
+    res = (path, file_name, format)
+    return res
 
 
 if __name__ == "__main__":

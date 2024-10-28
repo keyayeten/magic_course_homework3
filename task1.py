@@ -24,7 +24,17 @@
 
 
 def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
+    spisok = []
+    for key in companies:
+        sums = 0
+        for val in companies[key]:
+            sums += val
+        spisok.append(sums)
+    for lst in spisok:
+        if lst < 0:
+            return False
+    return True
+
 
 
 if __name__ == "__main__":
