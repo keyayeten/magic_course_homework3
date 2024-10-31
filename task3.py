@@ -9,8 +9,17 @@
 # print(longest_word(sentence2))  # "programming"
 
 
-def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
+def longest_word(sentence : str) -> str:
+    """
+    Функция, которая находит самое длинное слово в строке.
+    """
+
+    wordsList = sentence.split(" ")
+    max = ""
+    for word in wordsList:
+        if len(word) > len(max):
+            max = word
+    return max
 
 
 if __name__ == "__main__":
