@@ -18,8 +18,17 @@
 # print(are_anagrams(str1_3, str2_3))  # False
 
 
-def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
+def are_anagrams(str_1 : str, str_2 : str) -> bool:
+    """
+    Функция, которая проверяет, являются ли две строки анаграммами
+    """
+
+    #Решение подсмотрено на stackoverflow :) 
+    if sorted(str_1) == sorted(str_2):
+        return True
+    else:
+        return False
+
 
 
 if __name__ == "__main__":

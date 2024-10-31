@@ -13,8 +13,17 @@
 # {'a': 3, 'b': 3, 'c': 1}
 
 
-def count_frequencies(lst):
-    pass  # вместо pass - напишите свое решение
+def count_frequencies(lst) -> dict:
+    """
+    Функция подсчитывает, сколько раз каждый элемент встречается в списке и возвращает словарь с частотой каждого элемента.
+    """
+    dict = {}
+    for el in lst:
+        if el in dict:
+            dict[el] += 1
+        else:
+            dict[el] = 1
+    return dict
 
 
 if __name__ == "__main__":
