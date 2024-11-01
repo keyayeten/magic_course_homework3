@@ -1,16 +1,9 @@
 # Напишите функцию, которая находит самое длинное слово в строке.
 
-# Пример 1:
-# sentence1 = "The quick brown fox jumped over the lazy dog"
-# print(longest_word(sentence1))  # "jumped"
-
-# Пример 2:
-# sentence2 = "Python programming is fun"
-# print(longest_word(sentence2))  # "programming"
-
-
 def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
+    words = sentence.split()
+    longest_words = max(words, key=len)
+    return longest_words
 
 
 if __name__ == "__main__":
@@ -30,3 +23,4 @@ if __name__ == "__main__":
         longest_word(sentence2),
         "Верный ответ - programming"
     )
+    
