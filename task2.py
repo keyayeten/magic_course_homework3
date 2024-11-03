@@ -15,8 +15,11 @@
 
 
 def split_file_path(file_path):
-    pass  # вместо pass - напишите свое решение
-
+    a = file_path[:(file_path.rfind('/'))]
+    extension = file_path[(file_path.rfind('.') + 1):]
+    file_name = file_path[(file_path.rfind('/') + 1):(file_path.rfind('.'))]
+    result = (a, file_name, extension)
+    return result
 
 if __name__ == "__main__":
     file_path = "/home/user/documents/report.txt"

@@ -10,7 +10,9 @@
 
 
 def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
+    words = sentence.split()
+    m = max(map(len,words))
+    return list(filter(lambda w: len(w) == m, words)) [0]
 
 
 if __name__ == "__main__":

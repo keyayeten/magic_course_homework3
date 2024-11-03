@@ -17,11 +17,16 @@
 # str2_3 = "world"
 # print(are_anagrams(str1_3, str2_3))  # False
 
-
+def makemap(str):
+    m = {}
+    for i in str:
+        m[i] = m.get(i, 0) + 1
+    return m
 def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
-
-
+    m1 = makemap(str_1)
+    m2 = makemap(str_2)
+    return m1 == m2
+    
 if __name__ == "__main__":
     str1_1 = "listen"
     str2_1 = "silent"

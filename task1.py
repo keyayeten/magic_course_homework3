@@ -24,7 +24,14 @@
 
 
 def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
+        for c in companies:
+        l = companies[c]
+        balance = 0
+        for m in l:
+            balance += m
+        if balance < 0:
+            return False
+    return True
 
 
 if __name__ == "__main__":
