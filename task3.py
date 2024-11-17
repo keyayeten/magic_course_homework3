@@ -10,8 +10,12 @@
 
 
 def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
-
+    words = sentence.split(' ')
+    a = {}
+    for word in words:
+        a[word] = len(word)
+    sorted_a = sorted(a.items(), key=lambda item: item[1], reverse=True)
+    return sorted_a[0][0]
 
 if __name__ == "__main__":
     sentence1 = "The quick brown fox jumped over the lazy dog"
